@@ -20,8 +20,6 @@ module.exports = {
   updateTodo(req, res) {
     let { id } = req.params;
     let { newVal } = req.body;
-    console.log('id', id);
-    console.log('newval', newVal);
     let todo = todos.find(t => t.id === +id);
     todo.todo = newVal;
     res.send(todos);
